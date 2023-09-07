@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="apple-touch-icon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous" async></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="main_page.css">
+    <title>Ai Brains</title>
+  </head>
+  <body>
+
+    <!-- navbar -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand text-warning" href="#"><i class="fa-solid fa-brain"></i> Ai Brains</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item p-2">
+            <a class="nav-link text-white" href="main_page.html"><i class="fa-solid fa-chart-column"></i> Dashboard</a>
+          </li>
+          <li class="nav-item p-2">
+            <a class="nav-link text-white" href="tasks.html"><i class="fa-solid fa-list"></i> Tasks</a>
+          </li>
+          <li class="nav-item p-2">
+            <a class="nav-link text-white" href="categories.html"><i class="fa-solid fa-sitemap"></i> Categories</a>
+          </li>
+          <li class="nav-item p-2">
+            <a class="nav-link text-white" href="employees.html"><i class="fa-solid fa-users"></i> Employees</a>
+          </li>
+          </ul>
+          <ul class="navbar-nav ms-auto">
+          <li class="nav-item dropdown p-2">
+            <a class="nav-link text-white" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa-solid fa-right-to-bracket"></i> Aditya
+            </a>
+            <ul class="dropdown-menu p-2" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="profile.html"><i class="fa-solid fa-user"></i> Profile</a></li>
+              <li><a class="dropdown-item" href="settings.html"><i class="fa-solid fa-gear"></i> Settings</a></li>
+            </ul>
+          </li>
+          <li class="nav-item p-2">
+            <a class="nav-link text-white" href="index.html"><i class="fa-solid fa-arrow-right-from-bracket"></i> SignOut</a>
+          </li>
+          </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- dashboard section -->
+
+  <section class="p-3 bg-teal">
+    <div class="container">
+      <div class="row">
+        <h1><i class="fa-solid fa-chart-column"></i> Dashboard</h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- Buttons section -->
+
+  <section class="p-3 bg-gray">
+    <div class="container">
+      <div class="row">
+        <div class="d-grid col-md-4 col-sm-12 mb-3">
+          <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#task-modal"><i class="fa-solid fa-plus"></i> ADD TASK</button>
+        </div>
+        <div class="d-grid col-md-4 col-sm-12 mb-3">
+          <button class="btn btn-success" type="button" data-bs-toggle="modal" data-bs-target="#category-model"><i class="fa-solid fa-plus"></i> ADD CATEGORY</button>
+        </div>
+        <div class="d-grid col-md-4 col-sm-12 mb-3">
+          <button class="btn btn-warning" type="button" data-bs-toggle="modal" data-bs-target="#employee-model"><i class="fa-solid fa-plus"></i> ADD EMPLOYEE</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Add task modal -->
+
+  <div class="modal" id="task-modal" tabindex="-1">
+<div class="modal-dialog modal-lg">
+ <div class="modal-content">
+   <div class="modal-header bg-primary text-white">
+     <h3 class="modal-title">Add Task</h3>
+     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+   </div>
+   <div class="modal-body bg-gray">
+     <form>
+       <div class="mb-3">
+         <label for="exampleInputPassword1" class="form-label">Title</label>
+         <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Title">
+       </div>
+       <div class="mb-3">
+         <label for="exampleInputPassword2" class="form-label">Category</label>
+         <select class="form-select" aria-label="Default select example" id="exampleInputPassword2">
+           <option selected>Select a Category</option>
+           <option value="1">Development</option>
+           <option value="2">Sales</option>
+           <option value="3">Delivery</option>
+           <option value="3">Marketing</option>
+           <option value="3">UI/UX</option>
+         </select>
+       </div>
+       <div class="mb-3">
+         <label for="exampleInputPassword3" class="form-label">Image Upload</label>
+         <input type="file" class="form-control" id="exampleInputPassword3" placeholder="Choose File">
+         <small>MAX size : 3MB</small>
+       </div>
+       <div class="mb-3">
+         <label for="exampleInputPassword4" class="form-label">Description</label>
+         <textarea id="exampleInputPassword4" name="editor1" rows="8" cols="80" placeholder="Type Here"></textarea>
+       </div>
+     </form>
+   </div>
+   <div class="modal-footer bg-gray">
+     <button type="button" class="btn btn-primary">Add Task</button>
+     <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+
+   </div>
+ </div>
+</div>
+</div>
+
+   <!-- category-modal -->
+
+   <div class="modal" id="category-model" tabindex="-1">
+<div class="modal-dialog modal-lg">
+ <div class="modal-content">
+   <div class="modal-header bg-success text-white">
+     <h5 class="modal-title">Add Category</h5>
+     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+   </div>
+   <div class="modal-body bg-gray">
+     <form>
+       <div class="mb-3">
+        <input type="text" class="form-control" placeholder="Category Name">
+      </div>
+      <div class="mb-3">
+       <input type="date" class="form-control">
+     </div>
+     </form>
+   </div>
+   <div class="modal-footer bg-gray">
+      <button type="button" class="btn btn-success">Add Category</button>
+     <button type="button" class="btn btn-secondary bg-dark" data-bs-dismiss="modal">Close</button>
+
+   </div>
+ </div>
+</div>
+</div>
+
+<!-- employee-modal -->
+
+<div class="modal" id="employee-model" tabindex="-1">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header bg-warning text-white">
+  <h5 class="modal-title">Add Employee</h5>
+  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body bg-gray">
+  <form>
+    <div class="mb-3">
+     <input type="text" class="form-control" placeholder="Employee Name">
+   </div>
+   <div class="mb-3">
+    <input type="email" class="form-control" placeholder="Employee Email">
+  </div>
+  <div class="mb-3">
+   <input type="password" class="form-control" placeholder="Default Password">
+ </div>
+  </form>
+</div>
+<div class="modal-footer bg-gray">
+   <button type="button" class="btn btn-warning text-white">Add Employee</button>
+  <button type="button" class="btn btn-secondary bg-dark" data-bs-dismiss="modal">Close</button>
+
+</div>
+</div>
+</div>
+</div>
+
+
+  <!-- main-section -->
+
+  <section class="p-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-9">
+          <div class="card mb-3">
+            <div class="card-header bg-info text-white">
+              <h2>Current Tasks</h2>
+            </div>
+            <div class="card-body bg-gray table-responsive">
+
+              <table class="table">
+                <thead class="bg-dark text-white">
+                  <tr>
+                    <th scope="col">SNO</th>
+                    <th scope="col">NAME</th>
+                    <th scope="col">EMAIL</th>
+                    <th scope="col">TASK</th>
+                    <th scope="col">LEVEL</th>
+                    <th scope="col">CATEGORY</th>
+                    <th scope="col">DETAILS</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>mark@aibrains.com</td>
+                    <td>automation of emails</td>
+                    <td>medium</td>
+                    <td>Development</td>
+                    <td><a class="btn btn-sm btn-outline-dark shadow" href="#" role="button">DETAILS</a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Mark</td>
+                    <td>mark@aibrains.com</td>
+                    <td>automation of emails</td>
+                    <td>medium</td>
+                    <td>Development</td>
+                    <td><a class="btn btn-sm btn-outline-dark shadow" href="#" role="button">DETAILS</a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Mark</td>
+                    <td>mark@aibrains.com</td>
+                    <td>automation of emails</td>
+                    <td>medium</td>
+                    <td>Development</td>
+                    <td><a class="btn btn-sm btn-outline-dark shadow" href="#" role="button">DETAILS</a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td>Mark</td>
+                    <td>mark@aibrains.com</td>
+                    <td>automation of emails</td>
+                    <td>medium</td>
+                    <td>Development</td>
+                    <td><a class="btn btn-sm btn-outline-dark shadow" href="#" role="button">DETAILS</a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">5</th>
+                    <td>Mark</td>
+                    <td>mark@aibrains.com</td>
+                    <td>automation of emails</td>
+                    <td>medium</td>
+                    <td>Development</td>
+                    <td><a class="btn btn-sm btn-outline-dark shadow" href="#" role="button">DETAILS</a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">6</th>
+                    <td>Mark</td>
+                    <td>mark@aibrains.com</td>
+                    <td>automation of emails</td>
+                    <td>medium</td>
+                    <td>Development</td>
+                    <td><a class="btn btn-sm btn-outline-dark shadow" href="#" role="button">DETAILS</a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">7</th>
+                    <td>Mark</td>
+                    <td>mark@aibrains.com</td>
+                    <td>automation of emails</td>
+                    <td>medium</td>
+                    <td>Development</td>
+                    <td><a class="btn btn-sm btn-outline-dark shadow" href="#" role="button">DETAILS</a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">8</th>
+                    <td>Mark</td>
+                    <td>mark@aibrains.com</td>
+                    <td>automation of emails</td>
+                    <td>medium</td>
+                    <td>Development</td>
+                    <td><a class="btn btn-sm btn-outline-dark shadow" href="#" role="button">DETAILS</a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">9</th>
+                    <td>Mark</td>
+                    <td>mark@aibrains.com</td>
+                    <td>automation of emails</td>
+                    <td>medium</td>
+                    <td>Development</td>
+                    <td><a class="btn btn-sm btn-outline-dark shadow" href="#" role="button">DETAILS</a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">10</th>
+                    <td>Mark</td>
+                    <td>mark@aibrains.com</td>
+                    <td>automation of emails</td>
+                    <td>medium</td>
+                    <td>Development</td>
+                    <td><a class="btn btn-sm btn-outline-dark shadow" href="#" role="button">DETAILS</a></td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <div class="card-header bg-primary text-white text-center">
+              <div class="row align-items-center">
+                <div class="col">
+                  <i class="fa-solid fa-list fa-5x"></i>
+                </div>
+                <div class="col">
+                  <h1 class="display-3">08</h1>
+                  <p>Tasks</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer text-center p-3">
+              <h5><a href="tasks.html" class="text-primary">View Details <i class="fa-solid fa-circle-right"></i></a></h5>
+            </div>
+          </div>
+          <div class="card mt-3">
+            <div class="card-header bg-success text-white text-center">
+              <div class="row align-items-center">
+                <div class="col">
+                  <i class="fa-solid fa-sitemap fa-5x"></i>
+                </div>
+                <div class="col">
+                  <h1 class="display-3">06</h1>
+                  <p>categories</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer text-center p-3">
+              <h5><a href="categories.html" class="text-success">View Details <i class="fa-solid fa-circle-right"></i></a></h5>
+            </div>
+          </div>
+          <div class="card mt-3">
+            <div class="card-header bg-warning text-white text-center">
+              <div class="row align-items-center">
+                <div class="col">
+                  <i class="fa-solid fa-users fa-5x"></i>
+                </div>
+                <div class="col">
+                  <h1 class="display-3">04</h1>
+                  <p>Employees</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer text-center p-3">
+              <h5><a href="employees.html" class="text-warning">View Details <i class="fa-solid fa-circle-right"></i></a></h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- footer -->
+
+  <footer class="p-3 bg-dark text-white text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h3>Copyright &copy; 2023 , AiBrains.com</h3>
+          <h6>All Rights Reserved</h6>
+          <h6>Developed and Maintained By<a href="#" class="text-warning"> Aditya</a></h6>
+        </div>
+      </div>
+    </div>
+  </footer>

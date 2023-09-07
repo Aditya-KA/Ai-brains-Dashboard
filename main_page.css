@@ -1,0 +1,31 @@
+.html{
+  scroll-behavior: smooth;
+}
+
+
+.dropdown-item:hover{
+  background-color: black;
+  color: white;
+  box-shadow: 0px 0px 5px black;
+}
+
+
+.bg-teal,.btn-teal{
+  background-color: #2a6f6f;
+  color: white;
+}
+
+.bg-gray{
+  background-color: lightgray;
+}
+
+.card-footer a, a{
+  text-decoration: none;
+}
+
+
+@media (max-width: 576px){
+  .table{
+    width: 370px;
+  }
+}

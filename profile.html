@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="apple-touch-icon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous" async></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="main_page.css">
+    <title>Ai Brains</title>
+  </head>
+  <body>
+
+    <!-- navbar -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand text-warning" href="#"><i class="fa-solid fa-brain"></i> Ai Brains</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item p-2">
+            <a class="nav-link text-white" href="main_page.html"><i class="fa-solid fa-chart-column"></i> Dashboard</a>
+          </li>
+          <li class="nav-item p-2">
+            <a class="nav-link text-white" href="tasks.html"><i class="fa-solid fa-list"></i> Tasks</a>
+          </li>
+          <li class="nav-item p-2">
+            <a class="nav-link text-white" href="categories.html"><i class="fa-solid fa-sitemap"></i> Categories</a>
+          </li>
+          <li class="nav-item p-2">
+            <a class="nav-link text-white" href="employees.html"><i class="fa-solid fa-users"></i> Employees</a>
+          </li>
+          </ul>
+          <ul class="navbar-nav ms-auto">
+          <li class="nav-item dropdown p-2">
+            <a class="nav-link text-white" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa-solid fa-right-to-bracket"></i> Aditya
+            </a>
+            <ul class="dropdown-menu p-2" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="profile.html"><i class="fa-solid fa-user"></i> Profile</a></li>
+              <li><a class="dropdown-item" href="settings.html"><i class="fa-solid fa-gear"></i> Settings</a></li>
+            </ul>
+          </li>
+          <li class="nav-item p-2">
+            <a class="nav-link text-white" href="index.html"><i class="fa-solid fa-arrow-right-from-bracket"></i> SignOut</a>
+          </li>
+          </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- dashboard section -->
+
+  <section class="p-3 bg-teal">
+    <div class="container">
+      <div class="row">
+        <h1><i class="fa-solid fa-user"></i> Profile</h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- Buttons section -->
+
+  <section class="p-3 bg-gray">
+    <div class="container">
+      <div class="row">
+        <div class="d-grid col-md-3 col-sm-12 mb-3">
+          <a  href="main_page.html" class="btn btn-info"  type="button"><i class="fa-solid fa-arrow-left"></i> DASHBOARD</a>
+        </div>
+        <div class="d-grid col-md-3 col-sm-12">
+
+        </div>
+        <div class="d-grid col-md-3 col-sm-12 mb-3">
+          <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#employee-model1"><i class="fa-solid fa-lock"></i> UPDATE PASSWORD</button>
+        </div>
+        <div class="d-grid col-md-3 col-sm-12 mb-3">
+          <button  type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#delete-model" type="button"><i class="fa-solid fa-xmark"></i> DELETE ACCOUNT</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+<!-- employee-modal -->
+
+<div class="modal" id="employee-model1" tabindex="-1">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header bg-primary text-white">
+  <h5 class="modal-title">Update Password</h5>
+  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body bg-gray">
+  <form>
+    <div class="mb-3">
+     <input type="email" class="form-control" placeholder="Enter Email">
+   </div>
+   <div class="mb-3">
+    <input type="password" class="form-control" placeholder="Enter New Password">
+  </div>
+  <div class="mb-3">
+   <input type="password" class="form-control" placeholder="Re-enter New Password">
+ </div>
+  </form>
+</div>
+<div class="modal-footer bg-gray">
+   <button type="button" class="btn btn-primary text-white">Update</button>
+  <button type="button" class="btn btn-secondary bg-dark" data-bs-dismiss="modal">Close</button>
+
+</div>
+</div>
+</div>
+</div>
+
+
+<!-- delete modal -->
+
+<div class="modal" tabindex="-1" id="delete-model">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header bg-danger text-white">
+        <h5 class="modal-title">Deleted</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Account Deleted Succesfully!!!</p>
+      </div>
+      <div class="modal-footer">
+        <a href="index.html" class="btn btn-dark">Done</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- main-body -->
+
+<section class="p-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9">
+        <div class="card mb-3">
+          <div class="card-header bg-teal">
+            <h2>About Me</h2>
+         </div>
+          <div class="card-body bg-gray">
+            <div class="p-3 bg-white">
+              <h1>Aditya</h1>
+            </div>
+            <div class="p-3 my-2 bg-white">
+              <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            <div class="p-3 bg-white">
+              <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+         </div>
+       </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card shadow" style="width: 18rem;">
+          <div class="card-header bg-teal text-center">
+            <h3>Aditya</h3>
+          </div>
+          <div class="card-body text-center">
+            <div class="p-1 my-3">
+              <img src="my-pic.png" class="img-thumbnail shadow img-fluid">
+            </div>
+            <div class="p-1 my-3">
+              <button class="btn btn-success" type="button"><i class="fa-solid fa-pen"></i> EDIT IMAGE</button>
+            </div>
+            <div class="p-1 my-3">
+               <button class="btn btn-danger" type="button"><i class="fa-solid fa-trash"></i> DELETE IMAGE</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- footer -->
+
+  <footer class="p-3 bg-dark text-white text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h3>Copyright &copy; 2023 , AiBrains.com</h3>
+          <h6>All Rights Reserved</h6>
+          <h6>Developed and Maintained By<a href="#" class="text-warning"> Aditya</a></h6>
+        </div>
+      </div>
+    </div>
+  </footer>
